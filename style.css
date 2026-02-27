@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+body {
+    background-color: #E8F3FC;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    background-color: #0054A3;
+    padding: 10px;
+}
+
+main {
+    margin: 50px;
+}
+
+#income {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#expenses {
+    display: grid;
+    grid-template-areas: 
+    'ml f&e' 
+    'ins other';
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+#monthlyLiabilities {
+    grid-area: 'ml';
+}
+
+#foodEssentials {
+    grid-area: 'f&e';
+}
+
+#insurance {
+    grid-area: 'ins';
+}
+
+#otherExpenses {
+    grid-area: 'other';
+}
