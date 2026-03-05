@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <script type="module" src="./app.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -14,7 +16,7 @@
                 <h1>EECU Budget Calculator</h1>
             </div>
         </nav>
-        
+
     </header>
 
     <main>
@@ -25,11 +27,11 @@
                     <label for="career">Select a Career: </label>
                     <select name="career" id="career">
                         <option selected value="100000">Basic 100k</option>
-                    </select>   
+                    </select>
                 </div>
                 <div id="income" class="flex column">
                     <label for="income">Annual Salary: $</label>
-                     <input type="number" id="income">
+                    <input type="number" id="income">
                 </div>
             </div>
 
@@ -37,9 +39,8 @@
                 <section id="income-taxes">
                     <div class="section-header">
                         <h3>Income Taxes</h3>
+                        <button id="dropCheck" type="checkbox" name="Monthly Liabilities">
                     </div>
-                    <input id="dropCheck" type="checkbox" name="Income Taxes" />
-                    <label for="dropCheck">Income Taxes</label>
                     <div class="panel income-taxes">
                         <img src="../images/add.png" alt="Add cost field button">
                         <cost-inputs name="Federal Income Tax"></cost-inputs>
@@ -51,8 +52,10 @@
 
 
                 <section id="monthlyLiabilities">
-                    <input id="dropCheck" type="checkbox" name="Monthly Liabilities" />
-                    <label for="dropCheck">Monthly Liabilities</label>
+                    <div class="section-header">
+                        <h3>Monthly Liabilities</h3>
+                        <button id="dropCheck" type="checkbox" name="Monthly Liabilities">
+                    </div>   
                     <div class="panel monthly-liabilities"> <!-- make this class-->
                         <!-- Add the plus button and all input fields into here and do it for all the other sections-->
                         <img src="../images/add.png" alt="Add cost field button">
@@ -62,10 +65,12 @@
                         <cost-inputs name="Other Debts"></cost-inputs>
                     </div>
                 </section>
-               
+
                 <section id="foodEssentials">
-                    <input id="dropCheck" type="checkbox" name="Monthly Liabilities" />
-                    <label for="dropCheck">Foods &amp; Essentials</label>
+                    <div class="section-header">
+                        <h3>Food & Essentials</h3>
+                        <button id="dropCheck" type="checkbox" name="Monthly Liabilities">
+                    </div>
                     <div class="panel food-essentials">
                         <img src="../images/add.png" alt="Add cost field button">
                         <cost-inputs name="Groceries"></cost-inputs>
@@ -73,11 +78,13 @@
                         <cost-inputs name="Child Care"></cost-inputs>
                         <cost-inputs name="Medical"></cost-inputs>
                     </div>
-    
+
                 </section>
                 <section id="insurance">
-                    <input id="dropCheck" type="checkbox" name="Monthly Liabilities" />
-                    <label for="dropCheck">Insurance</label>
+                    <div class="section-header">
+                        <h3>Insurance</h3>
+                        <button id="dropCheck" type="checkbox" name="Monthly Liabilities">
+                    </div>
                     <div class="panel insurance">
                         <img src="../images/add.png" alt="Add cost field button">
                         <cost-inputs name="Auto Insurance"></cost-inputs>
@@ -87,8 +94,10 @@
                     </div>
                 </section>
                 <section id="otherExpenses">
-                    <input id="dropCheck" type="checkbox" name="Monthly Liabilities" />
-                    <label for="dropCheck">Other Expenses</label>
+                    <div class="section-header">
+                        <h3>Other Expenses</h3>
+                        <button id="dropCheck" type="checkbox" name="Monthly Liabilities">
+                    </div>
                     <div class="panel other-expenses">
                         <img src="../images/add.png" alt="Add cost field button">
                         <cost-inputs name="Other"></cost-inputs>
@@ -101,12 +110,12 @@
             <h2>Chart Content Here</h2>
             <section id="analysis">
                 <section id="analysisStatistics">
-                    
+
                 </section>
             </section>
         </section>
-    
-    
+
+
     </main>
     <template id="cost-input">
         <label for="cost">Words</label>
@@ -114,6 +123,7 @@
     </template>
     <template>
 
-    </template> 
+    </template>
 </body>
+
 </html>

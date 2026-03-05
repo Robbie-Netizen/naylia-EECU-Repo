@@ -28,6 +28,7 @@ header {
     color: white;
     padding: 20px;
     background-color: var(--primary-color);
+    max-height:200px
 }
 
 header div.logo h1 {
@@ -102,11 +103,14 @@ select, option, input {
 .section-header {
     font-size: 1.25rem;
     font-weight: bold;
-    margin-bottom: 0.5rem;
     background-color: var(--primary-color);
     color: white;
     border-radius: 0.5rem 0.5rem 0 0;
-    padding: 0.5rem;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    display:inline-flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .section-header h3 {
@@ -147,9 +151,7 @@ select, option, input {
 
 /*Change theses values to be unique for each div. You need to give each input element from the HTML file a unique class, then link each input to their respecive CSS files*/
 /*For monthly*/
-input, div.monthly-liabilities {
-    display: none;
-}
+
 
 label {
     position: relative;
@@ -163,9 +165,7 @@ input:checked~div.monthly-liabilities {
 
 
 /*For food*/
-input, div.food-essentials {
-    display: none;
-}
+
 
 label {
     position: relative;
@@ -179,9 +179,7 @@ input:checked~div.food-essentials {
 
 
 /*For insurance*/
-input, div.insurance {
-    display: none;
-}
+
 
 label {
     position: relative;
@@ -194,9 +192,7 @@ input:checked~div.insurance {
 }
 
 /*For other*/
-input, div.other-expenses {
-    display: none;
-}
+
 
 label {
     position: relative;
@@ -206,4 +202,17 @@ label {
 
 input:checked~div.other-expenses {
     display: block;
+}
+
+#dropCheck {
+    max-width: 20px;
+    max-height: 20px;
+    background-image: url(images/dropdown.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    
+
 }
